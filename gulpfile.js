@@ -23,7 +23,7 @@ gulp.task('style', function(){
         'node_modules/normalize.css/normalize.css',
         'node_modules/slick-carousel/slick/slick.css',
         'node_modules/magnific-popup/dist/magnific-popup.css',
-        
+        'node_modules/ion-rangeslider/css/ion.rangeSlider.css'
     ])
         .pipe(concat('libs.min.css'))
         .pipe(cssmin())
@@ -35,7 +35,7 @@ gulp.task('script', function(){
         'node_modules/slick-carousel/slick/slick.min.js',
         'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
         'node_modules/mixitup/dist/mixitup.js',
-        
+        'node_modules/ion-rangeslider/js/ion.rangeSlider.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
@@ -66,4 +66,4 @@ gulp.task('watch', function(){
     gulp.watch('app/js/*.js', gulp.parallel('js'))
 });
 
-gulp.task('default', gulp.parallel('script', 'sass', 'watch', 'browser-sync'));
+gulp.task('default', gulp.parallel('script', 'style', 'sass', 'watch', 'browser-sync'));
