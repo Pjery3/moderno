@@ -1,7 +1,5 @@
 $(function () {
 
-
-
   $('.rate-star').rateYo({
     halfStar: true,
     starWidth: "13px",
@@ -26,6 +24,29 @@ $(function () {
     prefix: "$"
 
 });
+
+$('.icon-th-list').on('click', function(){
+  $('.products__item').addClass('list');
+  $('.icon-th-list').addClass('active')
+  $('.icon-th-large').removeClass('active')
+})
+
+$('.icon-th-large').on('click', function(){
+  $('.products__item').removeClass('list')
+  $('.icon-th-list').removeClass('active')
+  $('.icon-th-large').addClass('active')
+})
+
+
+
+$('.menu__btn').on('click', function(){
+  $('.menu__list').slideToggle();
+})
+
+$('.header__btn-menu').on('click', function(){
+  $('.header__box').toggleClass('active');
+})
+
 
   if($('.products__inner-box').length) {
     var mixer = mixitup('.products__inner-box');
