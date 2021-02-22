@@ -407,6 +407,7 @@
 // start modal
 
 #modal {
+    display: none;
     background-color: $green;
     max-width: 730px;
     width: 100%;
@@ -1879,7 +1880,7 @@ button.icon-unsorted {
                                 padding: 16px 17px;
                                 max-width: 344px;
                                 width: 100%;
-                                &::placeholder{
+                                &::placeholder {
                                     font-size: 15px;
                                     color: #7a7a7a;
                                 }
@@ -1893,7 +1894,7 @@ button.icon-unsorted {
                             width: 100%;
                             margin-top: 28px;
                             margin-bottom: 20px;
-                            &::placeholder{
+                            &::placeholder {
                                 font-size: 15px;
                                 color: #7a7a7a;
                             }
@@ -1916,6 +1917,108 @@ button.icon-unsorted {
 }
 
 // end contact
+
+//start settings
+
+.settings {
+    padding-bottom: 100px;
+    .product-one__tabs.settings__tabs {
+        display: flex;
+        .tabs {
+            border: 1px solid #dedede;
+            max-width: 270px;
+            background-color: #fff;
+            margin-right: 30px;
+            height: 100%;
+            .tab {
+                display: block;
+                padding: 15px 50px;
+                @include f500;
+                font-size: 14px;
+                color: #707070;
+                cursor: pointer;
+                &:before {
+                    left: 24px;
+                    color: #444;
+                }
+                & + .tab {
+                    border-top: 1px solid #ccc;
+                }
+                &.active {
+                    color: $bg;
+                    border-bottom: 2px solid $green;
+                    &:before {
+                        color: $green;
+                    }
+                }
+            }
+        }
+        .tab__content {
+            max-width: 870px;
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            .tab__head {
+                font-size: 24px;
+                @include f500;
+                color: #444444;
+                padding: 20px 25px;
+                border-bottom: 1px solid #ccc;
+            }
+            .tab-item {
+                padding: 33px 37px 70px 37px;
+                &.active-tab {
+                }
+                form {
+                    .tab-line {
+                        display: flex;
+                        justify-content: space-between;
+                        & + .tab-line {
+                            margin-top: 22px;
+                        }
+                        .tab-item__text {
+                            font-size: 15px;
+                            color: #444;
+                            width: 260px;
+                        }
+                        input {
+                            border: 1px solid #dcdcdc;
+                            background-color: #f9f9f9;
+                            padding: 10px;
+                            width: 100%;
+                            max-width: 540px;
+                        }
+                        select {
+                            max-width: 540px;
+                            width: 100%;
+                            border: 1px solid #dcdcdc;
+                            background-color: #f9f9f9;
+                            color: #444;
+                        }
+                    }
+                    .tab-btn {
+                        text-align: center;
+                        margin-top: 22px;
+                        button {
+                            color: #fff;
+                            padding: 13px;
+                            width: 110px;
+                            border: none;
+                            background-color: $green;
+                            @include f500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//end settings
+
+//start profile
+
+//end profile
 
 //start product details
 
